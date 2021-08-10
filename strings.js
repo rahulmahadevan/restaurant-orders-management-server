@@ -18,5 +18,11 @@ module.exports = {
 	USER_LOGIN_FAILED_MSG: "UnauthorizedUser",
 
 	SERVER_ERROR_CODE: 500,
-	SERVER_ERROR_MSG: "InternalServerError"
+	SERVER_ERROR_MSG: "InternalServerError",
+
+	ORDER_INSERT_SUCCESS: "OrderInsertedSuccessfully",
+	ORDER_INSERT_FAILED: "FailedToInsertOrder",
+
+	ORDER_UPDATE_SUCCESS: "OrderUpdatedSuccessfully",
+	ORDER_UPDATE_FAILED: "FailedToUpdateOrder"
 }

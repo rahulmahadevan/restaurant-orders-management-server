@@ -38,7 +38,36 @@ app.post("/fetchMenu", (req, res) => {
 		res.send(response);
 	}
 	
-})
+});
+
+app.post("/putOrder", (req, res) => {
+	let token = req.body.token;
+	if(utils.authenticateClient(token)){
+		let order = req.body.order;
+		let orderId = req.body.orderId;
+		utils.putOrder(orderId, order, res); 	//Response will be sent by this function
+	}else {
+		response = {
+			responseCode: strings.CLIENT_AUTH_FAILED_CODE,
+			responseMessage: strings.CLIENT_AUTH_FAILED_MSG
+		};
+		res.send(response);
+	}
+});
+
+app.post("/fetchOrders", (req, res) => {
+	let token = req.body.token;
+	let status = req.body.status;
+	if(utils.authenticateClient(token)){
+		utils.fetchOngoingOrders(status, res);
+	}else {
+		response = {
+			responseCode: strings.CLIENT_AUTH_FAILED_CODE,
+			responseMessage: strings.CLIENT_AUTH_FAILED_MSG
+		};
+		res.send(response);
+	}
+});
 
 
 module.exports.startServer = () => {
