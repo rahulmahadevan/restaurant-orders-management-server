@@ -1,6 +1,6 @@
 # theweekendcafe-server
 
 Server- Node.js
+Framework - Express
 Database- MongoDB
 
-Node.js server created using MVC Architecture
