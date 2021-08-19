@@ -1,8 +1,6 @@
 # theweekendcafe-server
 
-Server- Node.js
-Framework - Express
-Database- MongoDB
+Node, Express, MongoDB
 
 Functionality:
 
